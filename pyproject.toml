@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "fris"
+version = "0.1.0"
+description = "An implementation of a set of data mining methods, based on function of rival similarity."
+authors = ["Serhiy Yevtushenko <syevtushenko@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+numpy = "^1.26.0"
+scikit-learn = "*"
+matplotlib = "*"
+wxpython = "^4.2.1"
+pandas = "^2.2.1"
+reorder-python-imports-black = "^3.12.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^8.0.2"
+mypy = "^1.9.0"
+hypothesis = "^4.56.3"
+pre-commit = "^2.9.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

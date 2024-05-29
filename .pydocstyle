@@ -1,0 +1,14 @@
+[pydocstyle]
+inherit = false
+# D202 - conflicts with black - TO BE ALWAYS IGNORED
+#
+# D103 - Missing docstring in public function - Too much to fix in legacy code - for new code - To DISCUSS
+# D413 - Missing blank line after last section. Conflicts with docfomatter
+# Disabled for initial fixing to reduce scope:
+# D102 - D103: Missing docstring in public function
+# D104 - Missing docstring in public package
+# D107 - Missing docstring in __init__
+add-ignore = D202, D413, D102, D103, D104, D107
+
+#add-ignore = D202,D103 - #if you do not want to check for docstrings yet, uncomment this line at start and comment out the previous line
+match = .*(?<!_test)\.py

@@ -1,0 +1,58 @@
+repos:
+-   repo: https://github.com/wimglenn/reorder-python-imports-black
+    rev: v3.12.0
+    hooks:
+    -   id: reorder-python-imports
+        language_version: python3
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.1.0
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: check-docstring-first
+    -   id: check-json
+    -   id: check-yaml
+    -   id: name-tests-test
+
+-   repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.4.5
+    hooks:
+        - id: ruff
+          args: [ --fix ]
+
+-   repo: https://github.com/ambv/black
+    rev: 24.4.2
+    hooks:
+    - id: black
+      language_version: python3.11
+      args: ["--line-length", "120"]
+-   repo: https://github.com/pycqa/flake8
+    rev: 7.0.0
+    hooks:
+    -   id: flake8
+        language_version: python3.11
+        args: ["--max-line-length","120"]
+-   repo: https://github.com/pre-commit/mirrors-mypy
+    rev: 'v1.9.0'
+    hooks:
+    -   id: mypy
+-   repo: https://github.com/myint/docformatter
+    rev: v1.7.5
+    hooks:
+    - id: docformatter
+      name: docformatter
+      description: 'Formats docstrings to follow PEP 257.'
+      entry: docformatter
+      args: [-i, --wrap-summaries, "120", --wrap-description, "120"]
+      language: python
+      types: [python]
+-   repo: https://github.com/pycqa/pydocstyle
+    rev: 6.3.0
+    hooks:
+    - id: pydocstyle
+      name: pydocstyle
+      description: pydocstyle is a static analysis tool for checking compliance with Python docstring conventions.
+      entry: pydocstyle
+      language: python
+      language_version: python3
+      types: [python]

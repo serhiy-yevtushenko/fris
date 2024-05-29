@@ -1,0 +1,23 @@
+max-line-length = 120
+
+inline-quotes = "
+
+#W503 - line break before binary operator - incompatible with black
+#E203 - Whitespace before ':' (E203) - incompatible with black
+#E231 - missing whitespace after ','
+#E501 - line too long
+#E402 - module level import not at top of file
+#N806 - disable activated via side effect check from pep8 (variable in function should be lowercase)
+#G004 - conflicts when using a f-string in a logging statement
+
+ignore = W503,E203, E231, N806, G004
+
+exclude =
+    # No need to traverse our git directory
+    .git,
+    # There's no value in checking cache directories
+    __pycache__,
+    # No need to check idea
+    .idea,
+    # and .pytest_cache
+    .pytest_cache
